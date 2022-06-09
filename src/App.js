@@ -1,7 +1,17 @@
 import Expenses from './components/Expenses'
 import NewExpense from './components/NewExpense/NewExpense'
 
+
 function App() {
+
+  const SaveExpenseData = (enteredExpenseData) => {
+    const expenseData = {
+      ...enteredExpenseData,
+      id: Math.random().toString()
+    }
+    console.log(expenseData);
+    
+  }
 
   const expenses = [
     {
@@ -28,7 +38,7 @@ function App() {
 
   return (
     <div>
-      <NewExpense />
+      <NewExpense onSaveExpenseData={SaveExpenseData} />
       <Expenses items={expenses}/>
     </div>
   );

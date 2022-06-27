@@ -6,7 +6,6 @@ import ExpenseFilter from './ExpenseFilter';
 import './Expenses.css';
 
 
-
 function Expenses (props) {
 
     const [filteredYear, setFilteredYear] = useState('2022');

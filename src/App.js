@@ -2,6 +2,7 @@
 import React, { useState } from 'react'
 import Expenses from './components/Expenses'
 import NewExpense from './components/NewExpense/NewExpense'
+import HeroExpenses from "./components/HeroExpenses";
 
 
 const initialExpenses = [
@@ -15,15 +16,40 @@ const initialExpenses = [
   {
     id: 'e3',
     title: 'Car Insurance',
-    amount: 294.67,
+    amount: 194.67,
     date: new Date(2022, 2, 28),
   },
   {
     id: 'e4',
     title: 'New Desk (Wooden)',
-    amount: 450,
+    amount: 250,
+    date: new Date(2021, 5, 12),
+  },
+  {
+    id: 'e5',
+    title: 'Internet Plan',
+    amount: 69.99,
     date: new Date(2022, 5, 12),
   },
+  {
+    id: 'e6',
+    title: 'Phone Plan',
+    amount: 20,
+    date: new Date(2022, 1, 12),
+  },
+  {
+    id: 'e7',
+    title: 'Insurance',
+    amount: 400,
+    date: new Date(2021, 3, 12),
+  },
+  {
+    id: 'e8',
+    title: "Water Bill",
+    amount: 80,
+    date: new Date(2022, 7, 12),
+  },
+
 ];
 
 
@@ -43,6 +69,7 @@ function App() {
     <div>
       <NewExpense onSaveExpenseData={addExpenseHandler} />
       <Expenses items={expenses}/>
+      <HeroExpenses />
     </div>
   );
 }

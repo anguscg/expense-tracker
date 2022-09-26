@@ -9,7 +9,7 @@ import './Expenses.css';
 
 function Expenses (props) {
 
-    const [filteredYear, setFilteredYear] = useState('2022');
+    const [filteredYear, setFilteredYear] = useState('2022'); //Setting opening expenses to current year
 
     const filterChangeHandler = (selectedYear) => {
         setFilteredYear(selectedYear);
